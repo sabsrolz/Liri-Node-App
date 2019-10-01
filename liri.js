@@ -36,14 +36,32 @@ axios
   });
 
 //OMDb API output
-axios
-  .get("http://www.omdbapi.com/?t=Moana&apikey=trilogy")
-  .then(function(response) {
-    // console.log("movie output starts here");
-    // console.log(response);
+function movieRequest(movie) {
+  const movieQuery = `http://www.omdbapi.com/?t=${movie}&apikey=trilogy`;
+  axios.get(movieQuery).then(function(response) {
+    const movieObject = {
+      movieName: response.data.Title,
+      year: response.data.Year,
+      rating: response.data.Ratings[0].Value,
+      ratingRotten: response.data.Ratings[1].Value,
+      country: response.data.Country,
+      language: response.data.Language,
+      plot: response.data.Plot,
+      actors: response.data.Actors
+    };
+    console.log(movieObject);
   });
+}
 
 const [, , args] = process.argv;
 console.log(args);
 const type = args.split("-")[0];
 const nameInput = args.split("-")[1];
+
+function makeRequest() {
+  if (type === "movie") {
+    movieRequest(nameInput);
+  }
+}
+
+makeRequest();
