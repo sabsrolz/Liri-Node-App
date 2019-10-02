@@ -3,7 +3,8 @@ require("dotenv").config();
 
 //import Spotify keys from keys.js file
 let keys = require("./keys.js");
-
+//import fs module to read text from external text files
+let fs = require("fs");
 //Spotify API output
 function songRequest(track) {
   //import Spotify and axios modules
@@ -35,12 +36,13 @@ const axios = require("axios");
 
 //SeatGeek API output
 function concertRequest(artist) {
+  artist = "Taylor-Swift";
   axios
     .get(
       `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
     )
     .then(function(response) {
-      console.log(response._events);
+      //console.log(response);
     });
 }
 
@@ -62,18 +64,51 @@ function movieRequest(movie) {
   });
 }
 
+function readInput() {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+    // If the code experiences any errors it will log the error to the console.
+    if (error) {
+      return console.log(error);
+    }
+    console.log(data);
+    const inputType = data.split(",")[0];
+    const inputName = data.split(",")[1];
+
+    if (inputType === "movie-this") {
+      movieRequest(inputName);
+    } else if (inputType === "concert-this") {
+      concertRequest(inputName);
+    } else if (inputType === "spotify-this-song") {
+      songRequest(inputName);
+    }
+  });
+}
+
 const [, , args] = process.argv;
 console.log(args);
-const type = args.split("-")[0];
-const nameInput = args.split("-")[1];
+const type = args.split(",")[0];
+const nameInput = args.split(",")[1];
+console.log(nameInput);
 
 function makeRequest() {
-  if (type === "movie") {
-    movieRequest(nameInput);
-  } else if (type === "concert") {
+  if (type === "movie-this") {
+    if (nameInput != "") {
+      movieRequest(nameInput);
+    } else {
+      movieRequest("Mr Nobody");
+    }
+  } else if (type === "concert-this") {
     concertRequest(nameInput);
-  } else if (type === "song") {
-    songRequest(nameInput);
+  } else if (type === "spotify-this-song") {
+    if (nameInput != "") {
+      songRequest(nameInput);
+    } else {
+      songRequest("The Sign");
+    }
+  } else if (type === "do-what-it-says") {
+    readInput();
   }
 }
 makeRequest();
+
+//readInput();
