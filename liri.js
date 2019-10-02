@@ -5,6 +5,15 @@ require("dotenv").config();
 let keys = require("./keys.js");
 //import fs module to read text from external text files
 let fs = require("fs");
+
+function exportOutput(queryOutput) {
+  fs.appendFile("output.txt", queryOutput, function(err, data) {
+    if (err) {
+      console.log(err);
+    }
+    console.log('The "data to append" was appended to file!');
+  });
+}
 //Spotify API output
 function songRequest(track) {
   //import Spotify and axios modules
@@ -29,6 +38,7 @@ function songRequest(track) {
       album: trackOutput.album.album_type
     };
     console.log(songObject);
+    exportOutput(JSON.stringify(songObject));
   });
 }
 
@@ -36,13 +46,16 @@ const axios = require("axios");
 
 //SeatGeek API output
 function concertRequest(artist) {
-  artist = "Taylor-Swift";
+  artist = artist.replace(" ", "-");
+  console.log(artist);
+  //artist = "Taylor-Swift";
   axios
     .get(
       `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
     )
     .then(function(response) {
-      //console.log(response);
+      console.log(response);
+      exportOutput("concert output");
     });
 }
 
@@ -61,6 +74,7 @@ function movieRequest(movie) {
       actors: response.data.Actors
     };
     console.log(movieObject);
+    exportOutput(JSON.stringify(movieObject));
   });
 }
 
