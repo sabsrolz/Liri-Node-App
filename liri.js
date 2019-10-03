@@ -5,6 +5,7 @@ require("dotenv").config();
 let keys = require("./keys.js");
 //import fs module to read text from external text files
 let fs = require("fs");
+let moment = require("moment");
 
 function exportOutput(queryOutput) {
   fs.appendFile("output.txt", queryOutput, function(err, data) {
@@ -38,6 +39,7 @@ function songRequest(track) {
       album: trackOutput.album.album_type
     };
     console.log(songObject);
+    //exportOutput(JSON.stringify(songObject));
     exportOutput(JSON.stringify(songObject));
   });
 }
@@ -54,7 +56,14 @@ function concertRequest(artist) {
       `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
     )
     .then(function(response) {
-      console.log(response);
+      const concertObject = {
+        venueName: response.data.events[1].venue.name,
+        venueLocation: response.data.events[1].venue.extended_address,
+        eventDate: moment(response.data.events[1].datetime_local).format(
+          "MM/DD/YYYY"
+        )
+      };
+      console.log(concertObject);
       exportOutput("concert output");
     });
 }
@@ -98,11 +107,9 @@ function readInput() {
   });
 }
 
-const [, , args] = process.argv;
-console.log(args);
-const type = args.split(",")[0];
-const nameInput = args.split(",")[1];
-console.log(nameInput);
+const [, , type, nameInput] = process.argv;
+// const type = args.split(",")[0];
+// const nameInput = args.split(",")[1];
 
 function makeRequest() {
   if (type === "movie-this") {
