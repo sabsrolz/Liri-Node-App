@@ -4,21 +4,24 @@ require("dotenv").config();
 //import Spotify keys from keys.js file
 let keys = require("./keys.js");
 //import fs module to read text from external text files
-let fs = require("fs");
-let moment = require("moment");
+const fs = require("fs");
+const moment = require("moment");
+const inquirer = require("inquirer");
+let concertOptions = [];
+let concertObject = {};
 
 function exportOutput(queryOutput) {
   fs.appendFile("output.txt", queryOutput, function(err, data) {
     if (err) {
       console.log(err);
     }
-    console.log('The "data to append" was appended to file!');
+    //console.log('The "data to append" was appended to file!');
   });
 }
 //Spotify API output
 function songRequest(track) {
   //import Spotify and axios modules
-  let Spotify = require("node-spotify-api");
+  const Spotify = require("node-spotify-api");
 
   //initialize key information by importing spotify object from keys JS file
   let spotify = new Spotify(keys.spotify);
@@ -31,11 +34,13 @@ function songRequest(track) {
       return console.log("error occured: " + err);
     }
     const trackOutput = JSON.parse(JSON.stringify(data.tracks.items[0]));
+    //for testing: console.log(JSON.stringify(data.tracks.items[0], null, 7));
+    //console.log(data.tracks.items[0].album);
     const songObject = {
       artist: trackOutput.artists[0].name,
       songName: trackOutput.name,
       previewLink: trackOutput.preview_url,
-      album: trackOutput.album.album_type
+      album: trackOutput.album.name
     };
     Object.keys(songObject).forEach(key => {
       console.log(key + ": " + songObject[key]);
@@ -49,6 +54,39 @@ function songRequest(track) {
 
 const axios = require("axios");
 
+function concertSelect() {
+  const venueOptions = [];
+  concertOptions.forEach(concert => venueOptions.push(concert.venueName)); //TODO concatenate with dates for uniqueness
+
+  inquirer
+    .prompt([
+      {
+        type: "checkbox",
+        name: "concertInquirer",
+        message: "Select the venue that you want to output data for:",
+        choices: venueOptions
+      }
+    ])
+    .then(answers => {
+      //console.log(answers.concertInquirer);
+      for (let answer = 0; answer < answers.concertInquirer.length; answer++) {
+        //console.log(answers.concertInquirer[answer]);
+        for (let option = 0; option < concertOptions.length; option++) {
+          //console.log(concertObject.venueName);
+          if (
+            concertOptions[option].venueName === answers.concertInquirer[answer]
+          ) {
+            //console.log(concertOptions[option].venueName);
+            Object.keys(concertOptions[option]).forEach(key => {
+              console.log(key + ": " + concertOptions[option][key]);
+              exportOutput(key + ": " + concertOptions[option][key] + "\r\n");
+            });
+          }
+        }
+      }
+      //console.log(answers);
+    });
+}
 //SeatGeek API output
 function concertRequest(artist) {
   artist = artist.replace(" ", "-");
@@ -60,20 +98,25 @@ function concertRequest(artist) {
     )
     .then(function(response) {
       for (let event = 0; event < 4; event++) {
-        const concertObject = {
+        concertObject = {
           venueName: response.data.events[event].venue.name,
           venueLocation: response.data.events[event].venue.extended_address,
           eventDate: moment(response.data.events[event].datetime_local).format(
             "MM/DD/YYYY"
           )
         };
-        Object.keys(concertObject).forEach(key => {
-          console.log(key + ": " + concertObject[key]);
-          exportOutput(key + ": " + concertObject[key] + "\r\n");
-        });
+        concertOptions.push(concertObject);
+
+        // Object.keys(concertObject).forEach(key => {
+        //   console.log(key + ": " + concertObject[key]);
+        //   exportOutput(key + ": " + concertObject[key] + "\r\n");
+        // });
         //console.log(concertObject);
         //exportOutput(JSON.stringify(concertObject));
       }
+      console.log(concertOptions);
+      concertSelect();
+      //console.log(concertOptions);
     });
 }
 
@@ -125,6 +168,8 @@ const [, , type, nameInput] = process.argv;
 // const nameInput = args.split(",")[1];
 
 function makeRequest() {
+  exportOutput("-----------------------------------" + "\r\n");
+  exportOutput(`${type} ${nameInput} \r\n`);
   if (type === "movie-this") {
     if (nameInput != "") {
       movieRequest(nameInput);
