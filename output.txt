@@ -1,1 +1,37 @@
-concert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert outputconcert output
+artist: Bacilos
+songName: Mi primer millon
+previewLink: https://p.scdn.co/mp3-preview/ab36714bc501be5f0f128883327dd26e803512c5?cid=7ac97e415fb5454291bb985a22bcd9e4
+
+album: album
+album: album
+songName: Mi primer millon
+previewLink: https://p.scdn.co/mp3-preview/ab36714bc501be5f0f128883327dd26e803512c5?cid=7ac97e415fb5454291bb985a22bcd9e4
+artist: Bacilos
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+movieName: Moana
+ratingRotten: 96%
+rating: 7.6/10
+year: 2016
+language: English
+country: USA
+plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches Moana's island, she answers the Ocean's call to seek out the Demigod to set things right.
+actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
+movieName: The Grinch
+year: 2018
+ratingRotten: 59%
+rating: 6.3/10
+plot: A grumpy Grinch plots to ruin Christmas for the village of Whoville.
+actors: Benedict Cumberbatch, Cameron Seely, Rashida Jones, Pharrell Williams
+country: France, Japan, USA
+language: English

@@ -31,16 +31,19 @@ function songRequest(track) {
       return console.log("error occured: " + err);
     }
     const trackOutput = JSON.parse(JSON.stringify(data.tracks.items[0]));
-    console.log(trackOutput.preview_url);
     const songObject = {
       artist: trackOutput.artists[0].name,
       songName: trackOutput.name,
       previewLink: trackOutput.preview_url,
       album: trackOutput.album.album_type
     };
-    console.log(songObject);
+    Object.keys(songObject).forEach(key => {
+      console.log(key + ": " + songObject[key]);
+      exportOutput(key + ": " + songObject[key] + "\r\n");
+    });
+    //exportOutput("-----------------------------------" + "\r\n");
+    //console.log(songObject);
     //exportOutput(JSON.stringify(songObject));
-    exportOutput(JSON.stringify(songObject));
   });
 }
 
@@ -56,15 +59,21 @@ function concertRequest(artist) {
       `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
     )
     .then(function(response) {
-      const concertObject = {
-        venueName: response.data.events[1].venue.name,
-        venueLocation: response.data.events[1].venue.extended_address,
-        eventDate: moment(response.data.events[1].datetime_local).format(
-          "MM/DD/YYYY"
-        )
-      };
-      console.log(concertObject);
-      exportOutput("concert output");
+      for (let event = 0; event < 4; event++) {
+        const concertObject = {
+          venueName: response.data.events[event].venue.name,
+          venueLocation: response.data.events[event].venue.extended_address,
+          eventDate: moment(response.data.events[event].datetime_local).format(
+            "MM/DD/YYYY"
+          )
+        };
+        Object.keys(concertObject).forEach(key => {
+          console.log(key + ": " + concertObject[key]);
+          exportOutput(key + ": " + concertObject[key] + "\r\n");
+        });
+        //console.log(concertObject);
+        //exportOutput(JSON.stringify(concertObject));
+      }
     });
 }
 
@@ -82,8 +91,12 @@ function movieRequest(movie) {
       plot: response.data.Plot,
       actors: response.data.Actors
     };
-    console.log(movieObject);
-    exportOutput(JSON.stringify(movieObject));
+    Object.keys(movieObject).forEach(key => {
+      console.log(key + ": " + movieObject[key]);
+      exportOutput(key + ": " + movieObject[key] + "\r\n");
+    });
+    //console.log(movieObject);
+    //exportOutput(JSON.stringify(movieObject));
   });
 }
 
