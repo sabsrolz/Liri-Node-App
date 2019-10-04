@@ -11,3 +11,441 @@ previewLink: https://p.scdn.co/mp3-preview/cf4fe4a741da944052250838e9ad6577a7b41
 artist: Bacilos
 album: Caraluna
 songName: Caraluna
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: Los Angeles, CA 90068
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+eventDate: 12/13/2019
+venueLocation: New York, NY 10001
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+venueName: Hollywood Bowl
+venueName: Madison Square Garden
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+eventDate: 12/13/2019
+venueLocation: New York, NY 10001
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: New York, NY 10001
+venueName: SoFi Stadium
+eventDate: 12/13/2019
+venueName: Madison Square Garden
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueName: SoFi Stadium
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Los Angeles, CA 90068
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: Los Angeles, CA 90068
+venueName: Hollywood Bowl
+venueName: SoFi Stadium
+eventDate: 10/19/2019
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: Los Angeles, CA 90068
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueName: SoFi Stadium
+venueLocation: Los Angeles, CA 90068
+venueLocation: Inglewood, CA 90303
+eventDate: 10/19/2019
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+venueName: SoFi Stadium
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+-----------------------------------
+concert-this Taylor Swift 
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+venueName: Madison Square Garden
+eventDate: 10/19/2019
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+-----------------------------------
+concert-this Taylor Swift 
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Hollywood Bowl
+venueName: Madison Square Garden
+eventDate: 12/13/2019
+venueLocation: New York, NY 10001
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueLocation: Los Angeles, CA 90068
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+eventDate: 07/26/2020
+venueLocation: Inglewood, CA 90303
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: Los Angeles, CA 90068
+eventDate: 12/13/2019
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueLocation: New York, NY 10001
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueLocation: Los Angeles, CA 90068
+venueLocation: New York, NY 10001
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueLocation: Los Angeles, CA 90068
+venueName: Madison Square Garden
+eventDate: 12/13/2019
+eventDate: 07/25/2020
+venueName: Hollywood Bowl
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+concert-this Taylor Swift 
+-----------------------------------
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+venueLocation: New York, NY 10001
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 12/13/2019
+eventDate: 10/19/2019
+venueLocation: New York, NY 10001
+venueName: Madison Square Garden
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 12/13/2019
+venueLocation: New York, NY 10001
+eventDate: 12/13/2019
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+concert-this Taylor Swift 
+-----------------------------------
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: Madison Square Garden
+eventDate: 12/13/2019
+venueLocation: New York, NY 10001
+concert-this Taylor Swift 
+-----------------------------------
+-----------------------------------
+concert-this Taylor Swift 
+eventDate: 10/19/2019
+venueLocation: Los Angeles, CA 90068
+venueName: Hollywood Bowl
+venueName: SoFi Stadium
+eventDate: 07/25/2020
+venueLocation: Inglewood, CA 90303
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/26/2020
+concert-this Taylor Swift 
+-----------------------------------
+venueName: Hollywood Bowl
+venueLocation: Los Angeles, CA 90068
+eventDate: 10/19/2019
+venueName: SoFi Stadium
+venueLocation: Inglewood, CA 90303
+eventDate: 07/25/2020

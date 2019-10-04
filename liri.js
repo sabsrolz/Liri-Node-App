@@ -5,11 +5,16 @@ require("dotenv").config();
 let keys = require("./keys.js");
 //import fs module to read text from external text files
 const fs = require("fs");
+//import moment module to format concert dates
 const moment = require("moment");
+//import inquirer to prompt user input for concert request
 const inquirer = require("inquirer");
+//import axios for API get calls
+const axios = require("axios");
 let concertOptions = [];
 let concertObject = {};
 
+//exportOutput will be called to write API output to external output.txt file
 function exportOutput(queryOutput) {
   fs.appendFile("output.txt", queryOutput, function(err, data) {
     if (err) {
@@ -20,12 +25,12 @@ function exportOutput(queryOutput) {
 }
 //Spotify API output
 function songRequest(track) {
-  //import Spotify and axios modules
+  //import Spotify node package
   const Spotify = require("node-spotify-api");
 
   //initialize key information by importing spotify object from keys JS file
   let spotify = new Spotify(keys.spotify);
-
+  //use search method to pull data for inputted song name (only the first song is returned in this case)
   spotify.search({ type: "track", query: track, limit: 1 }, function(
     err,
     data
@@ -35,31 +40,30 @@ function songRequest(track) {
     }
     const trackOutput = JSON.parse(JSON.stringify(data.tracks.items[0]));
     //for testing: console.log(JSON.stringify(data.tracks.items[0], null, 7));
-    //console.log(data.tracks.items[0].album);
+    //initialize song object that stores items that will be displayed to user
     const songObject = {
       artist: trackOutput.artists[0].name,
       songName: trackOutput.name,
       previewLink: trackOutput.preview_url,
       album: trackOutput.album.name
     };
+    //loop through object to format output display
     Object.keys(songObject).forEach(key => {
+      //display output to console
       console.log(key + ": " + songObject[key]);
+      //export output to text file
       exportOutput(key + ": " + songObject[key] + "\r\n");
     });
-    //exportOutput("-----------------------------------" + "\r\n");
-    //console.log(songObject);
-    //exportOutput(JSON.stringify(songObject));
   });
 }
-
-const axios = require("axios");
-
+//function that allows user to select what concert to ouput data for
 function concertSelect() {
+  //array that will store a venue name/event date combination for first 4 events outputted by API
   const venueOptions = [];
   concertOptions.forEach(concert =>
     venueOptions.push(`${concert.venueName},${concert.eventDate}`)
-  ); //TODO concatenate with dates for uniqueness
-  console.log(venueOptions);
+  );
+  //method that will output concert options to user in command line as a checkbox list
   inquirer
     .prompt([
       {
@@ -70,17 +74,20 @@ function concertSelect() {
       }
     ])
     .then(answers => {
+      //iterate through user answers to display data based on their selection
       for (let answer = 0; answer < answers.concertInquirer.length; answer++) {
         for (let option = 0; option < concertOptions.length; option++) {
-          //console.log(concertObject.venueName);
           if (
             concertOptions[option].venueName ===
               answers.concertInquirer[answer].split(",")[0] &&
             concertOptions[option].eventDate ===
               answers.concertInquirer[answer].split(",")[1]
           ) {
+            //loop through object to format output display
             Object.keys(concertOptions[option]).forEach(key => {
+              //display output to console
               console.log(key + ": " + concertOptions[option][key]);
+              //export output to text file
               exportOutput(key + ": " + concertOptions[option][key] + "\r\n");
             });
           }
@@ -89,16 +96,16 @@ function concertSelect() {
       //console.log(answers);
     });
 }
-//SeatGeek API output
+//seatGeek platform API output
 function concertRequest(artist) {
   artist = artist.replace(" ", "-");
-  console.log(artist);
-  //artist = "Taylor-Swift";
+  //use get axios method to call seatGeek API for requested artist
   axios
     .get(
       `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
     )
     .then(function(response) {
+      //iterate through first 4 concert events and create object for each
       for (let event = 0; event < 4; event++) {
         concertObject = {
           venueName: response.data.events[event].venue.name,
@@ -107,25 +114,20 @@ function concertRequest(artist) {
             "MM/DD/YYYY"
           )
         };
+        //push each object to array of options that will be displayed to user
         concertOptions.push(concertObject);
-
-        // Object.keys(concertObject).forEach(key => {
-        //   console.log(key + ": " + concertObject[key]);
-        //   exportOutput(key + ": " + concertObject[key] + "\r\n");
-        // });
-        //console.log(concertObject);
-        //exportOutput(JSON.stringify(concertObject));
       }
-      console.log(concertOptions);
+      //call function that will allow the user to select which events to see data for
       concertSelect();
-      //console.log(concertOptions);
     });
 }
 
 //OMDb API output
 function movieRequest(movie) {
   const movieQuery = `http://www.omdbapi.com/?t=${movie}&apikey=trilogy`;
+  //use get axios method to call OMDb API for requested artist
   axios.get(movieQuery).then(function(response) {
+    //initialize movie object that stores items that will be displayed to user
     const movieObject = {
       movieName: response.data.Title,
       year: response.data.Year,
@@ -136,25 +138,26 @@ function movieRequest(movie) {
       plot: response.data.Plot,
       actors: response.data.Actors
     };
+    //loop through object to format output display
     Object.keys(movieObject).forEach(key => {
+      //display output to console
       console.log(key + ": " + movieObject[key]);
+      //export output to text file
       exportOutput(key + ": " + movieObject[key] + "\r\n");
     });
-    //console.log(movieObject);
-    //exportOutput(JSON.stringify(movieObject));
   });
 }
 
+//function that will take input from external random.text file - file will contain a movie, song, or concert request
 function readInput() {
   fs.readFile("random.txt", "utf8", function(error, data) {
-    // If the code experiences any errors it will log the error to the console.
     if (error) {
       return console.log(error);
     }
-    console.log(data);
+    //declare variables for each part of request
     const inputType = data.split(",")[0];
     const inputName = data.split(",")[1];
-
+    //condition that will call request function based on input
     if (inputType === "movie-this") {
       movieRequest(inputName);
     } else if (inputType === "concert-this") {
@@ -164,12 +167,12 @@ function readInput() {
     }
   });
 }
-
+//initialize variables for arguments inputted by user in command line
 const [, , type, nameInput] = process.argv;
-// const type = args.split(",")[0];
-// const nameInput = args.split(",")[1];
 
+//function that will call request function depending on process.argv values
 function makeRequest() {
+  //separator used to indicate new request in output text file
   exportOutput("-----------------------------------" + "\r\n");
   exportOutput(`${type} ${nameInput} \r\n`);
   if (type === "movie-this") {
@@ -190,6 +193,6 @@ function makeRequest() {
     readInput();
   }
 }
-makeRequest();
 
-//readInput();
+//app runs when calling makeRequest function
+makeRequest();
