@@ -50,9 +50,9 @@ function songRequest(track) {
     //loop through object to format output display
     Object.keys(songObject).forEach(key => {
       //display output to console
-      console.log(key + ": " + songObject[key]);
+      console.log(`${key}: ${songObject[key]}`);
       //export output to text file
-      exportOutput(key + ": " + songObject[key] + "\r\n");
+      exportOutput(`${key}: ${songObject[key]} \r\n`);
     });
   });
 }
@@ -86,9 +86,9 @@ function concertSelect() {
             //loop through object to format output display
             Object.keys(concertOptions[option]).forEach(key => {
               //display output to console
-              console.log(key + ": " + concertOptions[option][key]);
+              console.log(`${key}: ${concertOptions[option][key]}`);
               //export output to text file
-              exportOutput(key + ": " + concertOptions[option][key] + "\r\n");
+              exportOutput(`${key}: ${concertOptions[option][key]} \r\n`);
             });
           }
         }
@@ -141,9 +141,9 @@ function movieRequest(movie) {
     //loop through object to format output display
     Object.keys(movieObject).forEach(key => {
       //display output to console
-      console.log(key + ": " + movieObject[key]);
+      console.log(`${key}: ${movieObject[key]}`);
       //export output to text file
-      exportOutput(key + ": " + movieObject[key] + "\r\n");
+      exportOutput(`${key}: ${movieObject[key]} \r\n`);
     });
   });
 }
