@@ -56,8 +56,10 @@ const axios = require("axios");
 
 function concertSelect() {
   const venueOptions = [];
-  concertOptions.forEach(concert => venueOptions.push(concert.venueName)); //TODO concatenate with dates for uniqueness
-
+  concertOptions.forEach(concert =>
+    venueOptions.push(`${concert.venueName},${concert.eventDate}`)
+  ); //TODO concatenate with dates for uniqueness
+  console.log(venueOptions);
   inquirer
     .prompt([
       {
@@ -68,15 +70,15 @@ function concertSelect() {
       }
     ])
     .then(answers => {
-      //console.log(answers.concertInquirer);
       for (let answer = 0; answer < answers.concertInquirer.length; answer++) {
-        //console.log(answers.concertInquirer[answer]);
         for (let option = 0; option < concertOptions.length; option++) {
           //console.log(concertObject.venueName);
           if (
-            concertOptions[option].venueName === answers.concertInquirer[answer]
+            concertOptions[option].venueName ===
+              answers.concertInquirer[answer].split(",")[0] &&
+            concertOptions[option].eventDate ===
+              answers.concertInquirer[answer].split(",")[1]
           ) {
-            //console.log(concertOptions[option].venueName);
             Object.keys(concertOptions[option]).forEach(key => {
               console.log(key + ": " + concertOptions[option][key]);
               exportOutput(key + ": " + concertOptions[option][key] + "\r\n");
