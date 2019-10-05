@@ -99,11 +99,13 @@ function concertSelect() {
 }
 //seatGeek platform API output
 function concertRequest(artist) {
+  //declare variable that will store client id from external keys file
+  let seatGeek = keys.seatGeek.client_id;
   artist = artist.replace(" ", "-");
   //use get axios method to call seatGeek API for requested artist
   axios
     .get(
-      `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=Nzk1NDk5M3wxNTY5OTUzMjQ2Ljkz`
+      `https://api.seatgeek.com/2/events?performers.slug=${artist}&client_id=${seatGeek}`
     )
     .then(function(response) {
       //iterate through first 4 concert events and create object for each
@@ -125,7 +127,9 @@ function concertRequest(artist) {
 
 //OMDb API output
 function movieRequest(movie) {
-  const movieQuery = `http://www.omdbapi.com/?t=${movie}&apikey=trilogy`;
+  //declare variable that will store api key from external keys file
+  let OMDb = keys.OMDb.apikey;
+  const movieQuery = `http://www.omdbapi.com/?t=${movie}&apikey=${OMDb}`;
   //use get axios method to call OMDb API for requested artist
   axios.get(movieQuery).then(function(response) {
     //initialize movie object that stores items that will be displayed to user

@@ -31,3 +31,27 @@ album: Beautiful People (feat. Khalid)
 previewLink: https://p.scdn.co/mp3-preview/f94d8d0c1b37773ff493e7d83930545e3425ccd3?cid=7ac97e415fb5454291bb985a22bcd9e4 
 artist: Ed Sheeran 
 songName: Beautiful People (feat. Khalid) 
+-----------------------------------
+spotify-this-song She shook me all night long 
+artist: Sin City 
+songName: You Shook Me All Night Long 
+previewLink: https://p.scdn.co/mp3-preview/86792f42404dbba9066a42cdf32e057f42f89a38?cid=7ac97e415fb5454291bb985a22bcd9e4 
+album: She's Got Balls: A Tribute To AC/DC 
+-----------------------------------
+movie-this The big short 
+year: 2015 
+movieName: The Big Short 
+ratingRotten: 88% 
+rating: 7.8/10 
+language: English 
+actors: Ryan Gosling, Rudy Eisenzopf, Casey Groves, Charlie Talbert 
+plot: In 2006-7 a group of investors bet against the US mortgage market. In their research they discover how flawed and corrupt the market is. 
+country: USA 
+concert-this Jonas Brothers 
+-----------------------------------
+venueName: Chase Center 
+eventDate: 10/05/2019 
+venueLocation: Phoenix, AZ 85004 
+venueName: Talking Stick Resort Arena 
+eventDate: 10/08/2019 
+venueLocation: San Francisco, CA 94158 
