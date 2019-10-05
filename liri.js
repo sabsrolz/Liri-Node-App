@@ -39,6 +39,7 @@ function songRequest(track) {
       return console.log("error occured: " + err);
     }
     const trackOutput = JSON.parse(JSON.stringify(data.tracks.items[0]));
+
     //for testing: console.log(JSON.stringify(data.tracks.items[0], null, 7));
     //initialize song object that stores items that will be displayed to user
     const songObject = {
@@ -106,7 +107,7 @@ function concertRequest(artist) {
     )
     .then(function(response) {
       //iterate through first 4 concert events and create object for each
-      for (let event = 0; event < 4; event++) {
+      for (let event = 0; event < 5; event++) {
         concertObject = {
           venueName: response.data.events[event].venue.name,
           venueLocation: response.data.events[event].venue.extended_address,

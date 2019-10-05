@@ -17,7 +17,8 @@ App Description and Overview:
    -do-what-it-says
    This command will read input from external text file ("random.txt"). This file can contain any concert, movie or spotify-song command.
    User will see all requests/responses appended to log.txt file. If an error occurs when calling one of these functions then the log file will contain a record of the related issue.
-4. Include screenshots, gifs or videos of the app functioning
+4. link to video with demo:
+   https://drive.google.com/file/d/1SioB0jHn2srMhqQSwCBV7M3MnF7B9bB1/view
 
 5. Technologies used in the app
    -Node JS built is used for back-end API services.
@@ -28,4 +29,3 @@ App Description and Overview:
    -inquirer: used to prompt input from the user via console
    -node-spotify-api: Spotify node package that allows users to request song data via search API method.
    -axios: module that allows users to run API calls via a get method. Function returns a response with an output object.
-6. State your role in the app development
