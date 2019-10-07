@@ -48,6 +48,10 @@ function songRequest(track) {
       previewLink: trackOutput.preview_url,
       album: trackOutput.album.name
     };
+
+    if (songObject.previewLink === null) {
+      songObject.previewLink = "Preview link is unavailable for this track";
+    }
     //loop through object to format output display
     Object.keys(songObject).forEach(key => {
       //display output to console

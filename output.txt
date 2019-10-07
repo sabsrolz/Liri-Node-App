@@ -73,3 +73,56 @@ country: USA
 actors: Ryan Gosling, Rudy Eisenzopf, Casey Groves, Charlie Talbert 
 plot: In 2006-7 a group of investors bet against the US mortgage market. In their research they discover how flawed and corrupt the market is. 
 language: English 
+-----------------------------------
+concert-this Taylor Swift 
+venueName: Madison Square Garden 
+venueName: Hollywood Bowl 
+venueLocation: Los Angeles, CA 90068 
+venueName: Gillette Stadium 
+eventDate: 10/19/2019 
+venueLocation: Foxborough, MA 02035 
+eventDate: 12/13/2019 
+venueLocation: New York, NY 10001 
+eventDate: 07/31/2020 
+-----------------------------------
+concert-this Taylor Swift 
+venueName: SoFi Stadium 
+venueLocation: Inglewood, CA 90303 
+eventDate: 07/25/2020 
+eventDate: 07/26/2020 
+venueName: SoFi Stadium 
+venueLocation: Inglewood, CA 90303 
+-----------------------------------
+spotify-this-song make me proud 
+album: Take Care (Deluxe) 
+artist: Drake 
+previewLink: null 
+songName: Make Me Proud 
+-----------------------------------
+spotify-this-song make me proud 
+-----------------------------------
+spotify-this-song make me proud 
+album: Take Care (Deluxe) 
+artist: Drake 
+previewLink: null 
+songName: Make Me Proud 
+-----------------------------------
+spotify-this-song make me proud 
+previewLink: Preview link is unavailable for this track 
+songName: Make Me Proud 
+artist: Drake 
+album: Take Care (Deluxe) 
+-----------------------------------
+spotify-this-song Caralune 
+spotify-this-song Caraluna 
+-----------------------------------
+artist: Bacilos 
+previewLink: https://p.scdn.co/mp3-preview/cf4fe4a741da944052250838e9ad6577a7b41e9d?cid=7ac97e415fb5454291bb985a22bcd9e4 
+songName: Caraluna 
+album: Caraluna 
+-----------------------------------
+spotify-this-song mr Brightside 
+songName: Mr. Brightside 
+artist: The Killers 
+previewLink: Preview link is unavailable for this track 
+album: Hot Fuss 
